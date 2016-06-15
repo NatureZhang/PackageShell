@@ -3,9 +3,9 @@
 Code_Sign_Identity="iPhone Distribution: xxxxx Information System Co., Ltd"
 
 #工程名称
-Project_Name="studyWebView.xcodeproj"
+Project_Name="xxxxx.xcodeproj"
 #Target名称
-Target_Name="studyWebView"
+Target_Name="xxxxx"
 
 cd Target_Name
 
@@ -18,7 +18,7 @@ Fixed_Project_BundleId="com.zhang.dong"
 /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $Fixed_Project_BundleId" ${Project_Plist}
 
 #build
-xcodebuild -project "$Project_Name" -target "$Target_Name" -configuration Release CODE_SIGN_IDENTITY="$Code_Sign_Identity" clean build
+xcodebuild -project "$Project_Name" -target "$Target_Name" -configuration Release CODE_SIGN_IDENTITY="$Code_Sign_Identity" PRODUCT_BUNDLE_IDENTIFIER=$Fixed_Project_BundleId clean build
 
 Build_Directory="./build/Release-iphoneos"
 
