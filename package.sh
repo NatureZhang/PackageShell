@@ -7,8 +7,6 @@ Project_Name="xxxxx.xcodeproj"
 #Target名称
 Target_Name="xxxxx"
 
-cd Target_Name
-
 Project_Plist=$Target_Name/Info.plist
 
 #如果能从外界获取
